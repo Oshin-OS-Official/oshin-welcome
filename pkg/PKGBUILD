@@ -1,0 +1,30 @@
+# Maintainer: Team Oshin <https://github.com/Oshin-OS/>
+
+pkgname=oshin-welcome
+pkgdesc='Welcome screen for Oshin OS'
+pkgver=1
+pkgrel=1
+arch=('any')
+url="https://github.com/Oshin-OS/oshin-welcome"
+license=('GPL 3.0')
+makedepends=('git')
+depends=('python3' 'python-pyqt5')
+source=("git+$url.git")
+sha256sums=('SKIP')
+
+package() {
+    install -d ${pkgdir}/usr/share/oshin-welcome
+    install -d ${pkgdir}/usr/share/applications
+    install -d ${pkgdir}/usr/bin
+    install -d ${pkgdir}/etc/skel/.config/autostart
+
+    cp -r ${srcdir}/oshin-welcome/src/img/ "${pkgdir}/usr/share/oshin-welcome/img/"
+
+    cp -r ${srcdir}/oshin-welcome/src/oshin-welcome.py "${pkgdir}/usr/bin/oshin-welcome"
+    chmod +x "${pkgdir}/usr/bin/oshin-welcome"
+
+    cp -r ${srcdir}/oshin-welcome/src/oshin-welcome.desktop "${pkgdir}/etc/skel/.config/autostart/oshin-welcome.desktop"
+    chmod +x "${pkgdir}/etc/skel/.config/autostart/oshin-welcome.desktop"
+
+    cp -r ${srcdir}/oshin-welcome/src/oshin-welcome.desktop "${pkgdir}/usr/share/applications/oshin-welcome.desktop"
+}
