@@ -12,7 +12,7 @@ class ui_welcomescreen(object):
     def forumButtonAction(self):
         webbrowser.open("https://github.com/Oshin-OS/issues")
     def chatButtonAction(self):
-        webbrowser.open("https://github.com/Oshin-OS")
+        os.system("xdg-open /usr/local/bin/The-Team.pdf")
     def donateButtonAction(self):
         webbrowser.open("https://github.com/Oshin-OS")
     def wikiButtonAction(self):
@@ -195,7 +195,7 @@ class ui_welcomescreen(object):
         sizePolicy.setHeightForWidth(self.chatButton.sizePolicy().hasHeightForWidth())
         self.chatButton.setSizePolicy(sizePolicy)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("/usr/share/oshin-welcome/img/chat.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("/usr/share/oshin-welcome/img/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.chatButton.setIcon(icon3)
         self.chatButton.setObjectName("chatButton")
         self.chatButton.clicked.connect(self.chatButtonAction)
@@ -323,11 +323,11 @@ class ui_welcomescreen(object):
 
     def retranslateUi(self, WelcomeScreen):
         _translate = QtCore.QCoreApplication.translate
-        WelcomeScreen.setWindowTitle(_translate("WelcomeScreen", "Welcome To Oshin OS"))
+        WelcomeScreen.setWindowTitle(_translate("WelcomeScreen", "Welcome to Oshin OS"))
         self.wikiButton.setText(_translate("WelcomeScreen", "Wiki"))
         self.linksLabel.setText(_translate("WelcomeScreen", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">Useful Links:</span></p></body></html>"))
         self.donateButton.setText(_translate("WelcomeScreen", "Donate"))
-        self.chatButton.setText(_translate("WelcomeScreen", "Chat"))
+        self.chatButton.setText(_translate("WelcomeScreen", "The Team"))
         self.installationLabel.setText(_translate("WelcomeScreen", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">INSTALL OSHIN:</span></p></body></html>"))
         self.helperButton.setText(_translate("WelcomeScreen", "Install Oshin "))
         self.installButton.setText(_translate("WelcomeScreen", "Install"))
@@ -353,4 +353,5 @@ if __name__ == "__main__":
     ui.setupUi(WelcomeScreen)
     WelcomeScreen.show()
     os.system("pkexec /usr/bin/hblock &")
+    os.system("oshin-screen-monitor.sh &")
     sys.exit(app.exec_())
