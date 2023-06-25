@@ -20,7 +20,7 @@ class ui_welcomescreen(object):
     def newsButtonAction(self):
         webbrowser.open("https://oshinos.org/")
     def helpButtonAction(self):
-        webbrowser.open("https://github.com/Oshin-OS/issues")
+        webbrowser.open("https://github.com/Oshin-OS-Official/oshin-iso/issues")
     def helperButtonAction(self):
         subprocess.call("sudo calamares",shell=True)
     def installButtonAction(self):
