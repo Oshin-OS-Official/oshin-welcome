@@ -8,17 +8,17 @@ import os
 class ui_welcomescreen(object):
      ######################### CUSTOM ACTIONS ##########################
     def BugButtonAction(self):
-        webbrowser.open("https://github.com/Oshin-OS/issues")
+        webbrowser.open("https://github.com/Oshin-OS-Official/oshin-iso/issues")
     def forumButtonAction(self):
-        webbrowser.open("https://github.com/Oshin-OS/issues")
+        webbrowser.open("https://github.com/Oshin-OS-Official/oshin-iso/")
     def chatButtonAction(self):
         os.system("xdg-open /usr/local/bin/The-Team.pdf")
     def donateButtonAction(self):
-        webbrowser.open("https://github.com/Oshin-OS")
+        webbrowser.open("https://oshinos.org/")
     def wikiButtonAction(self):
-        webbrowser.open("https://oshin-os.github.io/")
+        webbrowser.open("https://github.com/Oshin-OS-Official/oshin-iso/wiki")
     def newsButtonAction(self):
-        webbrowser.open("https://oshin-os.github.io/")
+        webbrowser.open("https://oshinos.org/")
     def helpButtonAction(self):
         webbrowser.open("https://github.com/Oshin-OS/issues")
     def helperButtonAction(self):
