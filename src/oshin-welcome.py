@@ -12,7 +12,7 @@ class ui_welcomescreen(object):
     def forumButtonAction(self):
         webbrowser.open("https://github.com/Oshin-OS-Official/oshin-iso/")
     def chatButtonAction(self):
-        os.system("xdg-open /usr/local/bin/The-Team.pdf")
+        webbrowser.open("https://oshinos.org/")
     def donateButtonAction(self):
         webbrowser.open("https://oshinos.org/")
     def wikiButtonAction(self):
